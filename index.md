@@ -3,3 +3,5 @@
 [Here](files/IE582-Homework-1) is Homework 1
 
 [Here](files/Homework-2) is Homework 2
+
+[Here](files/Homework-3) is Homework 3
