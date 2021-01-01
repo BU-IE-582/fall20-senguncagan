@@ -504,6 +504,15 @@ cat(&quot;MAPE value for lasso regression model is equal to&quot;, mape_lasso)</
 ## glmnet.fit 12     elnet  list     
 ## lambda.min  1     -none- numeric  
 ## lambda.1se  1     -none- numeric</code></pre>
+<pre class="r"><code>lasso_0</code></pre>
+<pre><code>## 
+## Call:  cv.glmnet(x = train_matrik, y = train_wide$`Tüketim.Miktarı..MWh._00:00`,      weights = set.seed(123)) 
+## 
+## Measure: Mean-Squared Error 
+## 
+##       Lambda Measure      SE Nonzero
+## min 0.002454  0.7631 0.04392      25
+## 1se 0.008226  0.8047 0.04618      18</code></pre>
 <pre class="r"><code>summary(lasso_17)</code></pre>
 <pre><code>##            Length Class  Mode     
 ## lambda     100    -none- numeric  
@@ -517,6 +526,15 @@ cat(&quot;MAPE value for lasso regression model is equal to&quot;, mape_lasso)</
 ## glmnet.fit  12    elnet  list     
 ## lambda.min   1    -none- numeric  
 ## lambda.1se   1    -none- numeric</code></pre>
+<pre class="r"><code>lasso_17</code></pre>
+<pre><code>## 
+## Call:  cv.glmnet(x = train_matrik, y = train_wide$`Tüketim.Miktarı..MWh._17:00`,      weights = set.seed(123)) 
+## 
+## Measure: Mean-Squared Error 
+## 
+##       Lambda Measure     SE Nonzero
+## min 0.000330   3.686 0.1624      45
+## 1se 0.006485   3.842 0.1761      25</code></pre>
 <p>Lasso regression gives the best predictions. As for the the coefficients in the models, cross validation error increases for greater values of lambda. Therefore, minimum lambda values were selected.</p>
 <pre class="r"><code>comp &lt;- full_join(lasso, test)</code></pre>
 <pre><code>## Joining, by = c(&quot;Tarih&quot;, &quot;Saat&quot;, &quot;Tüketim.Miktarı..MWh.&quot;)</code></pre>
